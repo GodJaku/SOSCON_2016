@@ -1,0 +1,58 @@
+<ScrollView ux:Class="Sidebar" Background="#212831">
+	<StackPanel>
+		<WhileInactive Threshold="0.5">
+			<Move Target="user" X="-180" Duration="0.2" Delay="0.3" Easing="CircularIn" />
+			<Move Target="stats" X="-180" Duration="0.2" Delay="0.2" Easing="CircularIn" />
+			<Move Target="browser" X="-180" Duration="0.2" Delay="0.15" Easing="CircularIn" />
+			<Move Target="feed" X="-180" Duration="0.2" Delay="0.1" Easing="CircularIn" />
+			<Move Target="chat" X="-180" Duration="0.2" Delay="0.05" Easing="CircularIn" />
+			<Move Target="setting" X="-180" Duration="0.2" Delay="0.025" Easing="CircularIn" />
+		</WhileInactive>
+		<Text ux:Class="UserName" TextAlignment="Center" FontSize="18" TextColor="#fff" Margin="0,8,0,0"/>
+		<Text ux:Class="Stats" TextAlignment="Center" FontSize="16" TextColor="#fed166" />
+		<Text ux:Class="Relations" TextAlignment="Center" FontSize="11" TextColor="#414f5e"/>
+		<Text ux:Class="MenuLabel" TextAlignment="Center" FontSize="18" TextColor="#414f5e" Margin="0,0,0,0"/>
+
+		<StackPanel ux:Name="user">
+			<Panel Height="90"/>
+			<Circle Width="85" Height="85">
+				<ImageFill File="./assets/profile.jpeg"/>
+			</Circle>
+			<UserName>Ja-Ku</UserName>
+		</StackPanel>
+
+		<Grid ux:Name="stats" Alignment="HorizontalCenter" ColumnCount="3" Margin="0,10,0,15">
+			<StackPanel Width="70">
+				<Stats>2,342</Stats>
+				<Relations>Followers</Relations>
+			</StackPanel>
+			<Rectangle Height="40" Width="1">
+				<SolidColor Color="#414f5e"/>
+			</Rectangle>
+			<StackPanel Width="70">
+				<Stats>3,835</Stats>
+				<Relations>Following</Relations>
+			</StackPanel>
+		</Grid>
+
+		<Image ux:Class="SidebarIcon" Height="22" Width="22" Margin="0,24,0,9" Color="#7a96b2"/>
+		<StackPanel>
+			<StackPanel ux:Name="browser">
+				<SidebarIcon File="assets/icon/Browser.png"/>
+				<MenuLabel>NEWS</MenuLabel>
+			</StackPanel>
+			<StackPanel ux:Name="feed">
+				<SidebarIcon File="assets/icon/Feed.png"/>
+				<MenuLabel>FEED</MenuLabel>
+			</StackPanel>
+			<StackPanel ux:Name="chat">
+				<SidebarIcon File="assets/icon/Chat.png"/>
+				<MenuLabel>CHAT</MenuLabel>
+			</StackPanel>
+			<StackPanel ux:Name="setting">
+				<SidebarIcon File="assets/icon/setting.png"/>
+				<MenuLabel>SETTING</MenuLabel>
+			</StackPanel>
+		</StackPanel>
+	</StackPanel>
+</ScrollView>

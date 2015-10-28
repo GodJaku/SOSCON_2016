@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.uno.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.0.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIStatusBarHidden</key>
+
+
+
+	<false/>
+
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackOpaque</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+
+
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+
+
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+
+	</array>
+
+	<key>UIAppFonts</key>
+	<array>
+		<string>data/opensans-light-6be8c155.ttf</string>
+		<string>data/roboto-black-01d18345.ttf</string>
+		<string>data/roboto-blackitalic-b795d3d5.ttf</string>
+		<string>data/roboto-bold-c1fe896f.ttf</string>
+		<string>data/roboto-bolditalic-f52c127f.ttf</string>
+		<string>data/robotocondensed-bol-104f3d6e.ttf</string>
+		<string>data/robotocondensed-bol-95dc539e.ttf</string>
+		<string>data/robotocondensed-ita-b791e189.ttf</string>
+		<string>data/robotocondensed-lig-8322408d.ttf</string>
+		<string>data/robotocondensed-lig-d7657b1d.ttf</string>
+		<string>data/robotocondensed-reg-e5d39453.ttf</string>
+		<string>data/roboto-italic-63fde71a.ttf</string>
+		<string>data/roboto-light-db46c4dc.ttf</string>
+		<string>data/roboto-lightitalic-8e23482c.ttf</string>
+		<string>data/roboto-medium-331911df.ttf</string>
+		<string>data/roboto-mediumitalic-1efa86ef.ttf</string>
+		<string>data/roboto-regular-23b8b3b5.ttf</string>
+		<string>data/roboto-regular-c6e840e2.ttf</string>
+		<string>data/roboto-thin-98f67383.ttf</string>
+		<string>data/roboto-thinitalic-0b091d93.ttf</string>
+	</array>
+
+
+
+
+
+
+
+</dict>
+</plist>

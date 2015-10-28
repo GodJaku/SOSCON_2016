@@ -1,3 +1,63 @@
 <App Theme="Basic">
-</App>
+	<JavaScript File="es5.js"/>
+	<Text ux:Class="HeaderView" Margin="10,10,10,5" TextWrapping="Wrap" FontSize="18" TextColor="#444"/>
+	<Text ux:Class="ArticleView" Margin="10,0,10,0" TextWrapping="Wrap" FontSize="13" TextColor="#444"/>
+	<Text ux:Class="DateView" Margin="10,0,10,0" FontSize="13" TextColor="#999"/>
 
+	<EdgeNavigator ux:Name="EdgeNavigator">
+		<Sidebar Width="200" ux:Name="drawyer" EdgeNavigation.Edge="Left">
+			<ActivatingAnimation>
+				<Change mainAppTranslation.X="200"/>
+				<Change topMenuTranslation.Y="0"/>
+				<Change bottomMenuTranslation.Y="0"/>
+				<Change middleRectangle.Opacity="0" Easing="CircularOut" />
+				<Change topMenuRotation.Degrees= "45" Easing="ExponentialIn"/>
+				<Change bottomMenuRotation.Degrees="-45" Easing="ExponentialIn"/>
+				<Change topRectangle.Width="28"/>
+				<Change bottomRectangle.Width="28"/>
+			</ActivatingAnimation>
+		</Sidebar>
+
+	<DockPanel>
+		<Translation ux:Name="mainAppTranslation"/>
+		<StatusBarBackground Dock="Top"/>
+		<BottomFrameBackground Dock="Bottom"/>
+
+		<StackPanel Dock="Top">
+			<Grid ColumnData="auto, 1*, auto">
+				<Panel Margin="7,5,5,5" Height="32" Width="32" HitTestMode="LocalBounds">
+					<Clicked>
+						<Set EdgeNavigator.Active="drawyer"/>
+					</Clicked>
+					<Rectangle ux:Name="topRectangle" Height="2" Width="26" Fill="#444">
+						<Translation Y="-9" ux:Name="topMenuTranslation"/>
+						<Rotation ux:Name="topMenuRotation"/>
+					</Rectangle>
+					<Rectangle ux:Name="middleRectangle" Height="2" Width="26" Fill="#444"/>
+					<Rectangle ux:Name="bottomRectangle" Height="2" Width="26" Fill="#444">
+						<Translation Y="9" ux:Name="bottomMenuTranslation"/>
+						<Rotation ux:Name="bottomMenuRotation" />
+					</Rectangle>
+				</Panel>
+				<Text FontSize="22" Alignment="VerticalCenter" TextAlignment="Center" Value="NewsFeed" Padding="2"/>
+				<Panel Margin="7,5,5,5" Height="32" Width="32" HitTestMode="LocalBounds"/>
+			</Grid>
+			<Rectangle Height="1" Margin="0,5,0,0" Fill="#444" />
+		</StackPanel>
+
+		<ScrollView>
+			<StackPanel Alignment="Top">
+				<Each Items="{data.responseData.feed.entries}">
+					<Panel ux:Class="Divider" Margin="46,10,0,10" Alignment="VerticalCenter">
+						<Rectangle Height="1" Fill="#999"/>
+					</Panel>
+					<HeaderView Value="{title}"/>
+					<ArticleView Value="{content}"/>
+					<DateView Value="{publishedDate}"/>
+					<Divider />
+				</Each>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+	</EdgeNavigator>
+</App>
